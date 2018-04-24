@@ -13,10 +13,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="DAO" target="1.5" />
-      <module name="GorvitShop" target="1.5" />
-      <module name="Main" target="1.5" />
-      <module name="Services" target="1.5" />
+      <module name="DAO" target="7" />
+      <module name="GorvitShop" target="7" />
+      <module name="Main" target="7" />
+      <module name="Services" target="7" />
     </bytecodeTargetLevel>
   </component>
 </project>
