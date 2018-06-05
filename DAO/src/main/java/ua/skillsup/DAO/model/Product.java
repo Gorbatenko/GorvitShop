@@ -23,18 +23,26 @@ public class Product {
                 '}';
     }
 
-    public Product(String name, String category, String color, String parameter, int count, int price, Long id) {
+    public Product(Long id, String name, String category, String color, String parameter, int count, int price) {
+        this.id = id;
         this.name = name;
         this.category = category;
         this.color = color;
         this.parameter = parameter;
         this.count = count;
         this.price = price;
-        this.id = id;
     }
 
-    public Product() {
+    public Product(String name, String category, String color, String parameter, int count, int price, Object o) {
 
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -85,11 +93,4 @@ public class Product {
         this.price = price;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 }

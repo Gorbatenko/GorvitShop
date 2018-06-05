@@ -1,0 +1,6 @@
+ua\skillsup\DAO\repo\ProductDAO.class
+ua\skillsup\DAO\repo\impl\ProductDAOImpl.class
+ua\skillsup\DAO\model\Product.class
+ua\skillsup\DAO\repo\UserDAO.class
+ua\skillsup\DAO\repo\impl\UserDAOImpl.class
+ua\skillsup\DAO\model\User.class

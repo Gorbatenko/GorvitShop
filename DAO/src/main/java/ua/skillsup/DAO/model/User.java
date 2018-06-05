@@ -1,10 +1,22 @@
 package ua.skillsup.DAO.model;
 
+import javax.persistence.*;
+import java.util.Objects;
+
+@Entity
+@Table(name = "USERS")
 public class User {
-    private String firstName;
-    private String lastName;
-    private int age;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID", nullable = false)
     private Long id;
+    @Column(name = "FIRST_NAME", nullable = false)
+    private String firstName;
+    @Column(name = "LAST_NAME", nullable = false)
+    private String lastName;
+    @Column(name = "AGE")
+    private int age;
 
     @Override
     public String toString() {
@@ -57,5 +69,20 @@ public class User {
         this.lastName = lastName;
         this.age = age;
         this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(firstName, user.firstName) &&
+                Objects.equals(lastName, user.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(firstName, lastName);
     }
 }

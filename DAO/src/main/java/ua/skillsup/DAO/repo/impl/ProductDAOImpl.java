@@ -23,4 +23,8 @@ public class ProductDAOImpl implements ProductDAO {
     public List<Product> getAll() {
         return new ArrayList<>(productMap.values());
     }
+
+    public Map<Long, Product> getProductMap() {
+        return productMap;
+    }
 }

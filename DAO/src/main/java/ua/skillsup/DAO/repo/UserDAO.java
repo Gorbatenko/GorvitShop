@@ -9,4 +9,11 @@ public interface UserDAO {
     void create(User user);
 
     List<User> findAll();
+
+    User get(Long id);
+
+    void delete(Long id);
+
+    void update(Long id, User user);
+
 }
