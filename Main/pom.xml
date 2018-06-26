@@ -13,12 +13,4 @@
 
     <artifactId>Main</artifactId>
 
-    <dependencies>
-        <dependency>
-            <groupId>ua.skillsup</groupId>
-            <artifactId>Service</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
-
 </project>

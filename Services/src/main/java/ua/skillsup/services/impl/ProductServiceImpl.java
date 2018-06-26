@@ -1,5 +1,6 @@
 package ua.skillsup.services.impl;
 
+import org.springframework.transaction.annotation.Transactional;
 import ua.skillsup.DAO.model.Product;
 import ua.skillsup.DAO.repo.ProductDAO;
 import ua.skillsup.services.DTO.ProductDTO;
@@ -24,11 +25,13 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
+    @Transactional
     public void create(ProductDTO product) {
         productDAO.create(productConvert.toEntity(product));
     }
 
     @Override
+    @Transactional
     public List<ProductDTO> getAll() {
         List<Product> products = productDAO.getAll();
         List<ProductDTO> productDTOS = new ArrayList<>();

@@ -1,5 +1,6 @@
 package ua.skillsup.DAO.repo.impl;
 
+import org.springframework.stereotype.Repository;
 import ua.skillsup.DAO.model.Product;
 import ua.skillsup.DAO.repo.ProductDAO;
 
@@ -8,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Repository
 public class ProductDAOImpl implements ProductDAO {
 
     private final Map<Long,Product> productMap = new HashMap<>();

@@ -36,7 +36,7 @@ public class Main {
                     System.out.println(userDAO.findAll());
                     break;
                 case "PC":
-                    ProductDTO productDTO = new ProductDTO(args[1], args[2], args[3], args[4], Integer.parseInt(args[5]), Integer.parseInt(args[6]));
+                    ProductDTO productDTO = new ProductDTO(args[1], args[2], args[3], args[4], Integer.parseInt(args[5]), Double.parseDouble(args[6]));
                     productServices.create(productDTO);
                     break;
                 case "PL":

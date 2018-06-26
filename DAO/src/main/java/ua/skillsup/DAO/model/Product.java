@@ -1,29 +1,46 @@
 package ua.skillsup.DAO.model;
 
-public class Product {
+import net.bytebuddy.implementation.bind.annotation.Empty;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
+import org.springframework.lang.NonNull;
 
-    private String name;
-    private String category;
-    private String color;
-    private String parameter;
-    private int count;
-    private int price;
+import javax.persistence.*;
+
+@Entity
+@Table(name="PRODUCTS")
+public class Product {
+    @Id
+    @Column(name = "ID" , nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "NAME", nullable = false)
+    private String name;
+    @Column(name = "CATEGORY", nullable = false)
+    private String category;
+    @Column(name = "COLOR")
+    private String color;
+    @Column(name = "PARAMETER", nullable = false)
+    private String parameter;
+    @Column(name = "COUNT", nullable = false)
+    private int count;
+    @Column(name = "PRICE", nullable = false)
+    private Double price;
 
     @Override
     public String toString() {
         return "Product{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", category='" + category + '\'' +
                 ", color='" + color + '\'' +
                 ", parameter='" + parameter + '\'' +
                 ", count=" + count +
                 ", price=" + price +
-                ", id=" + id +
                 '}';
     }
 
-    public Product(Long id, String name, String category, String color, String parameter, int count, int price) {
+    public Product(Long id, String name, String category, String color, String parameter, int count, Double price) {
         this.id = id;
         this.name = name;
         this.category = category;
@@ -33,7 +50,7 @@ public class Product {
         this.price = price;
     }
 
-    public Product(String name, String category, String color, String parameter, int count, int price, Object o) {
+    public Product(String name, String category, String color, String parameter, int count, Double price, Object o) {
 
     }
 
@@ -85,11 +102,11 @@ public class Product {
         this.count = count;
     }
 
-    public int getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 

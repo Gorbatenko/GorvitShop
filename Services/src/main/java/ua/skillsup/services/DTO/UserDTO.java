@@ -13,11 +13,15 @@ public class UserDTO {
         this.age = age;
     }
 
+    public UserDTO(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     public UserDTO() {
     }
 
     public String getFirstName() {
-
         return firstName;
     }
 

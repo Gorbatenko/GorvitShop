@@ -7,9 +7,18 @@ public class ProductDTO {
     private String color;
     private String parameter;
     private int count;
-    private int price;
+    private Double price;
 
     public ProductDTO() {
+    }
+
+    public ProductDTO(String name, String category, String color, String parameter, int count, Double price) {
+        this.name = name;
+        this.category = category;
+        this.color = color;
+        this.parameter = parameter;
+        this.count = count;
+        this.price = price;
     }
 
     public String getName() {
@@ -52,21 +61,11 @@ public class ProductDTO {
         this.count = count;
     }
 
-    public int getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public ProductDTO(String name, String category, String color, String parameter, int count, int price) {
-
-        this.name = name;
-        this.category = category;
-        this.color = color;
-        this.parameter = parameter;
-        this.count = count;
+    public void setPrice(Double price) {
         this.price = price;
     }
 }

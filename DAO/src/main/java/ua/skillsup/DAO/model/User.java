@@ -64,7 +64,6 @@ public class User {
     }
 
     public User(String firstName, String lastName, int age, Long id) {
-
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -82,7 +81,6 @@ public class User {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(firstName, lastName);
     }
 }
