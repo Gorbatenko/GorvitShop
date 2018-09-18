@@ -1,18 +1,14 @@
 package ua.skillsup.DAO.model;
 
-import net.bytebuddy.implementation.bind.annotation.Empty;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
-import org.springframework.lang.NonNull;
-
 import javax.persistence.*;
 
 @Entity
-@Table(name="PRODUCTS")
+@Table(name = "PRODUCTS")
 public class Product {
+
     @Id
-    @Column(name = "ID" , nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID" , nullable = false)
     private Long id;
     @Column(name = "NAME", nullable = false)
     private String name;

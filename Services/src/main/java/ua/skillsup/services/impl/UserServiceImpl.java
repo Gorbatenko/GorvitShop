@@ -34,11 +34,11 @@ public class UserServiceImpl implements UserService {
     @Transactional
     public List<UserDTO> findAll() {
         List<User> users = userDao.findAll();
-        List<UserDTO> userDTOS = new ArrayList<>();
+        List<UserDTO> userDTOs = new ArrayList<>();
         for(User user: users){
-            userDTOS.add(userConvert.toDto(user));
+            userDTOs.add(userConvert.toDto(user));
         }
-        return userDTOS;
+        return userDTOs;
     }
 
     @Override

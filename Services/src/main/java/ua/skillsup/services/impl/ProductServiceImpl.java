@@ -34,10 +34,32 @@ public class ProductServiceImpl implements ProductService{
     @Transactional
     public List<ProductDTO> getAll() {
         List<Product> products = productDAO.getAll();
-        List<ProductDTO> productDTOS = new ArrayList<>();
+        List<ProductDTO> productDTOs = new ArrayList<>();
         for(Product product: products){
-            productDTOS.add(productConvert.toDto(product));
+            productDTOs.add(productConvert.toDto(product));
         }
-        return productDTOS;
+        return productDTOs;
     }
+
+    @Override
+    @Transactional
+    public List<ProductDTO> findAll() {
+        return null;
+    }
+
+    @Override
+    @Transactional
+    public void delete(Long id) {
+        productDAO.delete(id);
+    }
+
+    @Override
+    @Transactional
+    public void update(Long id, ProductDTO product) {
+        Product entity = productConvert.toEntity(product);
+        entity.setId(id);
+        productDAO.update(id, entity);
+    }
+
+
 }

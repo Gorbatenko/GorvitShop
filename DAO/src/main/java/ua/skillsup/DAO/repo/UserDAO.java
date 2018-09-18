@@ -1,7 +1,6 @@
 package ua.skillsup.DAO.repo;
 
 import ua.skillsup.DAO.model.User;
-
 import java.util.List;
 
 public interface UserDAO {
